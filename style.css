@@ -1,0 +1,150 @@
+/* 1. Configurações Globais e Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121212;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.6;
+}
+
+/* 2. Header (Barra Superior fixa) */
+.header {
+    width: 100%;
+    height: 85px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgba(18, 18, 18, 0.95);
+    border-bottom: 1px solid #333;
+    display: flex;
+    justify-content: center;
+}
+
+.header-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    color: #00ff41;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.nav-group {
+    display: flex;
+    gap: 12px;
+}
+
+.btn {
+    text-decoration: none;
+    color: white;
+    border: 1px solid #444;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 0.95rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #00ff41;
+    color: #121212;
+    border-color: #00ff41;
+    box-shadow: 0 0 15px rgba(0, 255, 65, 0.4);
+}
+
+/* 3. Seção Home com Adição de Imagem */
+.home {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* ABAIXO: Adição da imagem com camada escura (0.85 de opacidade) */
+    background: linear-gradient(rgba(18, 18, 18, 0.85), rgba(18, 18, 18, 0.85)), 
+                url('fundo.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.home-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    max-width: 900px;
+    font-weight: bold;
+}
+
+.home-content p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #efefef;
+}
+
+.highlight {
+    color: #00ff41;
+}
+
+/* 4. Botões da Home (home-actions) */
+.home-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 350px;
+}
+
+.btn-link {
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+    border: none;
+    display: inline-block;
+}
+
+.home-actions .btn-link:first-child {
+    background-color: #00ff41;
+    color: #121212;
+}
+
+.home-actions .btn-link:last-child {
+    background-color: transparent;
+    color: #00ff41;
+    border: 1px solid #444;
+}
+
+.btn-link:hover {
+    transform: scale(1.02);
+    filter: brightness(1.1);
+}
+
+section {
+    width: 100%;
+}
